@@ -1,0 +1,13 @@
+name: CI
+
+on: [push]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Telegram notification
+        run: |
+          curl -s -X POST https://api.telegram.org/bot7809091889:AAGaiPjX2BvfvYRbJrVPH2XrFPOas3hEeoY/sendMessage \
+          -d chat_id=2122107885 \
+          -d text="Багаутдинов Виталий"
